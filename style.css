@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    font-family: 'Creepster', cursive, sans-serif;
+    margin: 0;
+}
+
+header {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 44px;
+}
+
+h1 {
+    color: #DC143C;
+}
+
+.date {
+    font-size: 30px;
+    color: #4E1C26;
+}
+
+hr {
+    width: 85%;
+    height: 30px;
+    color: #7d192d;
+    background-color: #7D192D;
+}
+
+.screenings {
+    font-size: 40px;
+    text-align: center;
+    color: #DC143C;
+}
+
+.films {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.films img{
+    width: 100%;
+    max-width: 300px;
+    height: 468.26px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 20px 5px black;
+}
+
+.films::after {
+    content: "";
+    width: 350px;
+}
+
+.films p {
+    font-size: 18px;
+    color: #7D192D;
+}
+
+.tickets {
+    text-align: right;
+    color: #DC143C;
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    transform: rotate(-10deg);
+}
+
+.blink {
+    animation: blink 0.5s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
