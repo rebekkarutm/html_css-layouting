@@ -21,35 +21,102 @@ h1 {
 
 .date {
     font-size: 30px;
-    color: #4E1C26;
+    color: #7D192D;
 }
 
 hr {
     width: 85%;
     height: 30px;
-    color: #7d192d;
-    background-color: #7D192D;
+    color: #4E1C26;
+    background-color: #4E1C26;
 }
 
 .screenings {
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     color: #DC143C;
 }
 
-.films {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 10px;
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: [row1] 10% [row2] auto [row3] 50px [row4] 10% [row5] auto;
+    gap: 5px 0px;
+    place-items: center;
+    place-content: space-evenly;
+    grid-template-areas:
+        "title-1 title-2 title-3"
+        "film-1 film-2 film-3"
+        "empty empty empty"
+        "title-4 title-5 title-6"
+        "film-4 film-5 film-6";
 }
 
-.films img{
+.title-1 {
+    grid-area: title-1;
+    align-self: end;
+}
+
+.title-2 {
+    grid-area: title-2;
+    align-self: end;
+}
+
+.title-3 {
+    grid-area: title-3;
+    align-self: end;
+}
+
+.film-1 {
+    grid-area: film-1;
+    align-self: start;
+}
+
+.film-2 {
+    grid-area: film-2;
+    align-self: start;
+}
+
+.film-3 {
+    grid-area: film-3;
+    align-self: start;
+}
+
+.title-4 {
+    grid-area: title-4;
+    align-self: end;
+}
+
+.title-5 {
+    grid-area: title-5;
+    align-self: end;
+}
+
+.title-6 {
+    grid-area: title-6;
+    align-self: end;
+}
+
+.film-4 {
+    grid-area: film-4;
+    align-self: start;
+}
+
+.film-5 {
+    grid-area: film-5;
+    align-self: start;
+}
+
+.film-6 {
+    grid-area: film-6;
+    align-self: start;
+}
+
+.empty {
+    grid-area: empty;
+}
+
+#films img{
     width: 100%;
     max-width: 300px;
     height: 468.26px;
@@ -58,21 +125,15 @@ hr {
     box-shadow: 10px 20px 5px black;
 }
 
-.films::after {
-    content: "";
-    width: 350px;
-}
-
-.films p {
-    font-size: 18px;
+#films p {
+    font-size: 30px;
     color: #7D192D;
-}
 
+}
 .tickets {
     text-align: right;
     color: #DC143C;
     font-size: 30px;
-    padding-bottom: 20px;
     padding-right: 40px;
     transform: rotate(-10deg);
 }
