@@ -136,6 +136,9 @@ hr {
     color: #DC143C;
     font-size: 30px;
     padding-right: 40px;
+}
+
+.tickets-img {
     transform: rotate(-10deg);
 }
 
