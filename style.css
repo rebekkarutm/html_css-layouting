@@ -137,7 +137,7 @@ hr {
     padding-right: 40px;
 }
 
-.tickets-img {
+#tickets-img {
     transform: rotate(-10deg);
 }
 
